@@ -60,3 +60,19 @@ yarn-error.log*
 .idea/
 *.swp
 *.swo
+
+# LaTeX build artifacts
+*.aux
+*.out
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+*.toc
+*.lof
+*.lot
+*.bbl
+*.blg
+*.dvi
+examples/pdf/*.aux
+examples/pdf/*.out
+examples/pdf/*.log
