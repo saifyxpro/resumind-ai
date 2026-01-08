@@ -1,26 +1,266 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap");
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+
+  /* Executive Palette */
+  --color-canvas: #FFFFFF;
+  --color-canvas-alt: #F8FAFC;
+  /* Slate 50 */
+
+  --color-primary: #0F172A;
+  /* Slate 900 - Midnight Navy */
+  --color-secondary: #475569;
+  /* Slate 600 */
+  --color-tertiary: #94A3B8;
+  /* Slate 400 */
+
+  --color-accent: #0EA5E9;
+  /* Sky 500 */
+  --color-accent-hover: #0284C7;
+  /* Sky 600 */
+
+  --color-success: #10B981;
+  /* Emerald 500 */
+  --color-warning: #F59E0B;
+  /* Amber 500 */
+  --color-error: #EF4444;
+  /* Red 500 */
+
+  --color-border: #E2E8F0;
+  /* Slate 200 */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply bg-canvas text-primary antialiased;
+  font-family: var(--font-sans);
+  background-image: url('/bg.svg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+main {
+  @apply min-h-screen pt-4;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+  @apply tracking-tight text-primary;
+}
+
+h1 {
+  @apply text-5xl md:text-6xl lg:text-7xl font-bold leading-tight;
+}
+
+h2 {
+  @apply text-3xl md:text-4xl font-semibold;
+}
+
+h3 {
+  @apply text-xl md:text-2xl font-medium;
+}
+
+label {
+  font-family: var(--font-display);
+  @apply text-secondary font-medium text-xs uppercase tracking-widest mb-2 block;
+}
+
+input,
+textarea,
+select {
+  @apply w-full px-4 py-3 rounded-xl bg-white border border-border text-primary transition-all duration-200;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  @apply outline-none border-accent ring-2 ring-accent/10;
+}
+
+form {
+  @apply flex flex-col gap-6 w-full;
+}
+
+/* ============================================
+   COMPONENT CLASSES
+   ============================================ */
+
+@layer components {
+
+  /* Cards */
+  .executive-card {
+    @apply bg-white border border-border rounded-2xl p-6 transition-all duration-300;
+    box-shadow:
+      0 4px 6px -1px rgba(0, 0, 0, 0.02),
+      0 2px 4px -1px rgba(0, 0, 0, 0.02);
+  }
+
+  .executive-card:hover {
+    box-shadow:
+      0 20px 25px -5px rgba(0, 0, 0, 0.05),
+      0 8px 10px -6px rgba(0, 0, 0, 0.01);
+    border-color: #CBD5E1;
+    /* Slate 300 */
+  }
+
+  /* Buttons */
+  .btn-primary {
+    @apply relative overflow-hidden px-8 py-3.5 rounded-full font-sans font-semibold text-white bg-primary transition-all duration-300 transform active:scale-95 hover:bg-slate-800;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
+  }
+
+  .btn-primary:hover {
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.25);
+    transform: translateY(-1px);
+  }
+
+  .btn-accent {
+    @apply relative overflow-hidden px-8 py-3.5 rounded-full font-sans font-semibold text-white bg-accent transition-all duration-300 transform active:scale-95 hover:bg-accent-hover;
+    box-shadow: 0 4px 12px rgba(14, 165, 233, 0.25);
+  }
+
+  .btn-accent:hover {
+    box-shadow: 0 8px 20px rgba(14, 165, 233, 0.35);
+    transform: translateY(-1px);
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 rounded-full font-sans font-medium text-primary bg-white border border-border transition-all duration-200 hover:bg-slate-50 hover:border-slate-300 active:scale-95;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+
+  .btn-icon {
+    @apply p-2 rounded-xl text-secondary hover:text-primary hover:bg-slate-100 transition-colors duration-200;
+  }
+
+  /* Navbar */
+  .nav-container {
+    @apply relative mx-auto max-w-7xl;
+  }
+
+  .nav-glass {
+    @apply flex items-center justify-between px-6 py-3 rounded-full bg-white/90 backdrop-blur-md border border-white/20 shadow-lg shadow-slate-200/50 transition-all duration-300;
+  }
+
+  /* Resume Card */
+  .resume-item {
+    @apply flex flex-col bg-white rounded-2xl border border-border overflow-hidden transition-all duration-300 cursor-pointer hover:border-accent/30;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+  }
+
+  .resume-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
+  }
+
+  /* Badges */
+  .badge {
+    @apply inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold tracking-wide border;
+  }
+
+  .badge-success {
+    @apply bg-emerald-50 text-emerald-700 border-emerald-100;
+  }
+
+  .badge-warning {
+    @apply bg-amber-50 text-amber-700 border-amber-100;
+  }
+
+  .badge-error {
+    @apply bg-red-50 text-red-700 border-red-100;
+  }
+
+  .badge-neutral {
+    @apply bg-slate-50 text-slate-600 border-slate-200;
+  }
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+/* Clean, professional animations. No bounce, no jelly. */
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes shimmer-clean {
+  0% {
+    background-position: -200% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.stagger-1 {
+  animation-delay: 0.1s;
+}
+
+.stagger-2 {
+  animation-delay: 0.2s;
+}
+
+.stagger-3 {
+  animation-delay: 0.3s;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-slate-50;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 rounded-full border-4 border-slate-50;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-slate-400;
 }

@@ -1,0 +1,139 @@
+%-------------------------
+% Resume in Latex
+% Author : Resumind Example
+% License : MIT
+%-------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Huge \scshape Jordan Lee} \\ \vspace{1pt}
+    \small 987-654-3210 $|$ \href{mailto:jordan.ui@email.com}{\underline{jordan.ui@email.com}} $|$ 
+    \href{https://dribbble.com/jordanlee}{\underline{dribbble.com/jordanlee}} $|$
+    \href{https://jordanlee.portfolio}{\underline{jordanlee.portfolio}}
+\end{center}
+
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Parsons School of Design}{New York, NY}
+      {Bachelor of Fine Arts in Communication Design}{Aug. 2017 -- May 2021}
+  \resumeSubHeadingListEnd
+
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Lead UI Designer}{May 2021 -- Present}
+      {PixelPerfect Agency}{New York, NY}
+      \resumeItemListStart
+        \resumeItem{Designed high-conversion landing pages and marketing assets for Fortune 500 clients, achieving an average conversion rate uplift of 18\%.}
+        \resumeItem{Spearheaded the visual redesign of a fintech mobile app, focusing on micro-interactions and accessibility (WCAG 2.1 AA).}
+        \resumeItem{Created and maintained a comprehensive UI Kit and Design System, reducing design consistency errors by 90\%.}
+        \resumeItem{Partnered with motion designers to create custom Lottie animations that enhanced user delight and retention.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Visual Design Intern}{June 2020 -- Aug 2020}
+      {Studio G}{Austin, TX}
+      \resumeItemListStart
+        \resumeItem{Assisted in the branding and identity creation for 3 startups, including logo design and color palette selection.}
+        \resumeItem{Designed social media assets and email templates that aligned with established brand guidelines.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{NeoBank Mobile App} $|$ \emph{Figma, ProtoPie}}{Sep 2021}
+          \resumeItemListStart
+            \resumeItem{Designed a concept banking app focusing on dark mode aesthetics and simplified transaction flows.}
+            \resumeItem{Created a high-fidelity prototype demonstrating complex gesture-based interactions.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Traveler Web Portal} $|$ \emph{Adobe XD, Webflow}}{Jan 2021}
+          \resumeItemListStart
+            \resumeItem{Designed and built a responsive travel blog website using Webflow, featuring custom CMS layout and interactions.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+\section{Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Expertise}{: UI Design, Visual Design, Interaction Design, Prototyping, Wireframing, Branding, Typography, Color Theory} \\
+     \textbf{Tools}{: Figma, Adobe XD, Sketch, Photoshop, Illustrator, After Effects, ProtoPie, Webflow} \\
+     \textbf{Languages}{: HTML, CSS, Basic JavaScript}
+    }}
+ \end{itemize}
+
+\end{document}

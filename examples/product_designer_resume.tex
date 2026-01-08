@@ -1,0 +1,157 @@
+%-------------------------
+% Resume in Latex
+% Author : Resumind Example
+% License : MIT
+%-------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADER----------
+\begin{center}
+    \textbf{\Huge \scshape Alex Morgan} \\ \vspace{1pt}
+    \small 555-010-2345 $|$ \href{mailto:alex.morgan@email.com}{\underline{alex.morgan@email.com}} $|$ 
+    \href{https://linkedin.com/in/alexmorgan}{\underline{linkedin.com/in/alexmorgan}} $|$
+    \href{https://alexmorgan.design}{\underline{alexmorgan.design}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of California, Berkeley}{Berkeley, CA}
+      {Bachelor of Arts in Cognitive Science, Certificate in Design Innovation}{Aug. 2018 -- May 2022}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Senior Product Designer}{June 2022 -- Present}
+      {TechStream Solutions}{San Francisco, CA}
+      \resumeItemListStart
+        \resumeItem{Led the end-to-end redesign of the core enterprise dashboard, resulting in a 25\% increase in user engagement and 15\% reduction in support tickets.}
+        \resumeItem{Collaborated closely with Product Managers and Engineering to define product strategy and roadmap, ensuring design feasibility and business alignment.}
+        \resumeItem{Established and maintained the robust "StreamLine" design system in Figma, improving design-to-dev handoff efficiency by 40\%.}
+        \resumeItem{Conducted user research studies including 20+ user interviews and usability tests to validate new feature concepts.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Product Design Intern}{May 2021 -- Aug 2021}
+      {Creative Cloud Inc.}{San Jose, CA}
+      \resumeItemListStart
+        \resumeItem{Designed and prototyped a new mobile onboarding flow for 500k+ new monthly users, reducing drop-off rates by 12\%.}
+        \resumeItem{Created high-fidelity mockups and interactive prototypes using Figma and Principle for weekly stakeholder reviews.}
+        \resumeItem{Partnered with the accessibility team to audit and improve contrast ratios across the mobile application.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{EcoTrack App} $|$ \emph{Figma, iOS, User Research}}{Jan 2022 -- May 2022}
+          \resumeItemListStart
+            \resumeItem{Designed a mobile application to help users track their carbon footprint, winning "Best Design" at UC Berkeley Hackathon.}
+            \resumeItem{Conducted competitive analysis and user journey mapping to identify key pain points in existing sustainability apps.}
+            \resumeItem{Developed a clickable prototype used to pitch to local environmental non-profits.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Design}{: Figma, Adobe Creative Suite (XD, Illustrator, Photoshop), Sketch, Principle, Prototyping, Wireframing} \\
+     \textbf{Research}{: Usability Testing, User Interviews, A/B Testing, Heuristic Evaluation, User Personas, Journey Maps} \\
+     \textbf{Development}{: HTML, CSS, Basic JavaScript, Webflow} \\
+     \textbf{Collaboration}{: Jira, Notion, Slack, Miro, Agile/Scrum}
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}

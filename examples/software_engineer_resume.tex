@@ -1,0 +1,145 @@
+%-------------------------
+% Resume in Latex
+% Author : Resumind Example
+% License : MIT
+%-------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Huge \scshape Sarah Jenkins} \\ \vspace{1pt}
+    \small 123-456-7890 $|$ \href{mailto:sarah.dev@email.com}{\underline{sarah.dev@email.com}} $|$ 
+    \href{https://linkedin.com/in/sarahjenkins}{\underline{linkedin.com/in/sarahjenkins}} $|$
+    \href{https://github.com/sarahcodes}{\underline{github.com/sarahcodes}}
+\end{center}
+
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Georgia Institute of Technology}{Atlanta, GA}
+      {Master of Science in Computer Science}{Aug. 2020 -- May 2022}
+    \resumeSubheading
+      {University of Washington}{Seattle, WA}
+      {Bachelor of Science in Computer Science}{Aug. 2016 -- May 2020}
+  \resumeSubHeadingListEnd
+
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Senior Frontend Engineer}{June 2022 -- Present}
+      {CloudScale Dynamics}{Austin, TX}
+      \resumeItemListStart
+        \resumeItem{Architected and laid the groundwork for a new SaaS analytics platform using Next.js, React, and TypeScript, scaling to 10k+ daily users.}
+        \resumeItem{Improved application performance by 35\% through code splitting, image optimization (WebP), and server-side rendering (SSR).}
+        \resumeItem{Mentored 3 junior developers, conducting code reviews and instituting TDD practices that reduced production bugs by 20\%.}
+        \resumeItem{Collaborated with UX teams to implement complex data visualizations using D3.js and Recharts.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Software Engineer}{July 2020 -- May 2022}
+      {Nexus Systems}{Seattle, WA}
+      \resumeItemListStart
+        \resumeItem{Developed responsive web applications using React and Redux for a logistics management system.}
+        \resumeItem{Integrated RESTful APIs and transitioned legacy codebase to use GraphQL, reducing network payload size by 40\%.}
+        \resumeItem{Automated deployment pipelines using Docker and Jenkins, achieving continuous delivery for the frontend team.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{AniSearch} $|$ \emph{React, Tailwind, AniList API}}{Oct 2021}
+          \resumeItemListStart
+            \resumeItem{Built a real-time anime discovery engine with advanced filtering and search capabilities.}
+            \resumeItem{Implemented infinite scrolling and optimistic UI updates for a seamless user experience.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{TaskMaster CLI} $|$ \emph{Node.js, Commander.js, MongoDB}}{Jan 2021}
+          \resumeItemListStart
+            \resumeItem{Created a developer-focused command-line tool for task management and time tracking.}
+            \resumeItem{Published to NPM with over 500+ weekly downloads.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: TypeScript, JavaScript (ES6+), Python, HTML5, CSS3/SCSS, SQL} \\
+     \textbf{Frameworks/Libraries}{: React, Next.js, Vue.js, Node.js, Express, Tailwind CSS, Jest, Cypress} \\
+     \textbf{Tools}{: Git, Docker, AWS (S3, CloudFront), Figma, Webpack, Vercel} \\
+     \textbf{Concepts}{: REST API, GraphQL, CI/CD, Agile Methodology, Responsive Design}
+    }}
+ \end{itemize}
+
+\end{document}

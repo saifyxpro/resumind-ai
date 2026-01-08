@@ -1,0 +1,127 @@
+%-------------------------
+% Resume in Latex
+% Author : Resumind Example
+% License : MIT
+%-------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Huge \scshape James Sterling} \\ \vspace{1pt}
+    \small 212-555-0999 $|$ \href{mailto:james.sterling@email.com}{\underline{james.sterling@email.com}} $|$ 
+    \href{https://linkedin.com/in/jsterling}{\underline{linkedin.com/in/jsterling}}
+\end{center}
+
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {The Wharton School, University of Pennsylvania}{Philadelphia, PA}
+      {Bachelor of Science in Economics, Concentrations in Finance and Accounting}{Aug. 2016 -- May 2020}
+      \resumeItemListStart
+        \resumeItem{GPA: 3.9/4.0 $|$ Summa Cum Laude}
+        \resumeItem{President of Wharton Investment Trading Group}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Investment Banking Analyst}{June 2020 -- Present}
+      {Goldman Sachs - TMT Group}{New York, NY}
+      \resumeItemListStart
+        \resumeItem{Advised on \$5B+ in M\&A transactions and capital raising activities for large-cap technology clients.}
+        \resumeItem{Performed extensive financial modeling including DCF, LBO, comparable company analysis, and precedent transactions to value target companies.}
+        \resumeItem{Prepared pitch books, management presentations, and confidential information memorandums (CIMs) for management and potential investors.}
+        \resumeItem{Conducted due diligence for a \$2B acquisition of a SaaS company, coordinating with legal and accounting teams.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Summer Analyst}{June 2019 -- Aug 2019}
+      {J.P. Morgan - Diversified Industries}{New York, NY}
+      \resumeItemListStart
+        \resumeItem{Assisted in the valuation of a \$500M industrial conglomerate utilizing trading multiples and DCF analysis.}
+        \resumeItem{Researched industry trends and prepared market update slides for senior banker presentations.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+\section{Additional Information}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Skills}{: Financial Modeling (LBO, DCF, M\&A), Valuation, Bloomberg Terminal, Capital IQ, FactSet, Excel (VBA)} \\
+     \textbf{Certifications}{: CFA Level I Candidate, Series 79 & 63} \\
+     \textbf{Interests}{: Marathon Running, Chess, Classical Piano, Macroeconomics}
+    }}
+ \end{itemize}
+
+\end{document}

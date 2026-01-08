@@ -1,0 +1,138 @@
+%-------------------------
+% Resume in Latex
+% Author : Resumind Example
+% License : MIT
+%-------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Huge \scshape Michael Chen} \\ \vspace{1pt}
+    \small 206-555-0199 $|$ \href{mailto:michael.pm@email.com}{\underline{michael.pm@email.com}} $|$ 
+    \href{https://linkedin.com/in/michaelchenpm}{\underline{linkedin.com/in/michaelchenpm}}
+\end{center}
+
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Stanford University}{Stanford, CA}
+      {Master of Business Administration (MBA)}{Sep. 2018 -- June 2020}
+    \resumeSubheading
+      {University of Michigan}{Ann Arbor, MI}
+      {Bachelor of Science in Computer Engineering}{Sep. 2012 -- May 2016}
+  \resumeSubHeadingListEnd
+
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Senior Product Manager}{July 2020 -- Present}
+      {Streamline SaaS}{San Francisco, CA}
+      \resumeItemListStart
+        \resumeItem{Owned the product roadmap for the Core Automation Platform, launching 3 major features that drove \$5M in incremental ARR.}
+        \resumeItem{Conducted market research and competitor analysis to identify a gap in the SMB market, leading to the development of "Streamline Lite".}
+        \resumeItem{Facilitated cross-functional collaboration between Engineering, Design, and Sales teams to ensure on-time delivery of quarterly goals.}
+        \resumeItem{Analyzed user behavior data using Mixpanel to optimize the onboarding flow, increasing activation rates by 22\%.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Product Manager}{June 2016 -- Aug 2018}
+      {AutoTech Solutions}{Detroit, MI}
+      \resumeItemListStart
+        \resumeItem{Managed the lifecycle of the "SmartDash" infotainment system from concept to launch across 3 vehicle models.}
+        \resumeItem{Prioritized backlog items based on RICE scoring method, balancing technical debt with new feature development.}
+        \resumeItem{Worked closely with QA to reduce critical bugs by 50% prior to release candidate freeze.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Community Garden App} $|$ \emph{Side Project}}{Jan 2019 -- Present}
+          \resumeItemListStart
+            \resumeItem{Launched a mobile app connecting local gardeners with available plots of land.}
+            \resumeItem{Grew user base to 2,000 active monthly users with zero marketing budget through organic community engagement.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+\section{Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Product Strategy}{: Roadmap Planning, Vision Setting, Market Research, Competitor Analysis, Go-to-Market Strategy} \\
+     \textbf{Execution}{: Agile/Scrum, JIRA, User Stories, Backlog Prioritization, A/B Testing, MVP Development} \\
+     \textbf{Analytics}{: SQL, Tableau, Google Analytics, Mixpanel, Amplitude} \\
+     \textbf{Tools}{: Figma, Notion, Slack, Confluence, Trello}
+    }}
+ \end{itemize}
+
+\end{document}

@@ -1,0 +1,128 @@
+%-------------------------
+% Resume in Latex
+% Author : Resumind Example
+% License : MIT
+%-------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Huge \scshape David Kim} \\ \vspace{1pt}
+    \small 512-555-7890 $|$ \href{mailto:david.devops@email.com}{\underline{david.devops@email.com}} $|$ 
+    \href{https://linkedin.com/in/davidkimdevops}{\underline{linkedin.com/in/davidkimdevops}} $|$
+    \href{https://github.com/dkimops}{\underline{github.com/dkimops}}
+\end{center}
+
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Texas at Austin}{Austin, TX}
+      {Bachelor of Science in Computer Science}{Aug. 2014 -- May 2018}
+  \resumeSubHeadingListEnd
+
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Senior DevOps Engineer}{May 2021 -- Present}
+      {CloudNative Systems}{Remote}
+      \resumeItemListStart
+        \resumeItem{Designed and implemented a Kubernetes-based container orchestration platform on AWS EKS, supporting 50+ microservices.}
+        \resumeItem{Automated infrastructure provisioning using Terraform and Ansible, reducing environment setup time from 3 days to 2 hours.}
+        \resumeItem{Built a comprehensive CI/CD pipeline using GitHub Actions and ArgoCD, enabling daily deployments with zero downtime.}
+        \resumeItem{Implemented centralized logging and monitoring (ELK Stack, Prometheus, Grafana), improving incident response time by 40\%.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Site Reliability Engineer}{June 2018 -- Apr 2021}
+      {TechFalcon}{Austin, TX}
+      \resumeItemListStart
+        \resumeItem{Maintained 99.99\% availability for high-traffic e-commerce applications during peak holiday seasons.}
+        \resumeItem{Wrote Python and Go scripts to automate routine maintenance tasks and database backups.}
+        \resumeItem{Participated in on-call rotation and led post-incident reviews to identify root causes and prevent recurrence.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Cloud Platforms}{: AWS (EC2, S3, RDS, Lambda, VPC, IAM), GCP, Azure} \\
+     \textbf{Containerization}{: Docker, Kubernetes (EKS, GKE), Helm} \\
+     \textbf{IaC & Config}{: Terraform, Ansible, CloudFormation, Packer} \\
+     \textbf{CI/CD}{: Jenkins, GitHub Actions, GitLab CI, CircleCI, ArgoCD} \\
+     \textbf{Scripting}{: Python, Bash, Go} \\
+     \textbf{Monitoring}{: Prometheus, Grafana, Datadog, New Relic, ELK Stack}
+    }}
+ \end{itemize}
+
+\end{document}

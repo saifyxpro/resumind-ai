@@ -1,0 +1,144 @@
+%-------------------------
+% Resume in Latex
+% Author : Resumind Example
+% License : MIT
+%-------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Huge \scshape Prianka Sharma} \\ \vspace{1pt}
+    \small 415-555-0921 $|$ \href{mailto:prianka.data@email.com}{\underline{prianka.data@email.com}} $|$ 
+    \href{https://linkedin.com/in/priankasharma}{\underline{linkedin.com/in/priankasharma}} $|$
+    \href{https://github.com/priankadata}{\underline{github.com/priankadata}}
+\end{center}
+
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Carnegie Mellon University}{Pittsburgh, PA}
+      {Master of Computational Data Science}{Aug. 2019 -- Dec 2020}
+    \resumeSubheading
+      {Indian Institute of Technology, Bombay}{Mumbai, India}
+      {Bachelor of Technology in Computer Science}{July 2015 -- May 2019}
+  \resumeSubHeadingListEnd
+
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Senior Data Scientist}{Jan 2021 -- Present}
+      {FinTech Global}{New York, NY}
+      \resumeItemListStart
+        \resumeItem{Developed and deployed a fraud detection model using XGBoost and AWS SageMaker, preventing \$2M in fraudulent transactions annually.}
+        \resumeItem{Led a team of 4 data scientists to build a customer churn prediction pipeline, improving retention rates by 15\% via targeted interventions.}
+        \resumeItem{Engineered a real-time recommendation system handling 10k requests/second using Apache Spark and Kafka.}
+        \resumeItem{Collaborated with product teams to design A/B tests quantifying the impact of new features on user engagement.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Data Science Intern}{May 2020 -- Aug 2020}
+      {HealthAI Inc.}{Boston, MA}
+      \resumeItemListStart
+        \resumeItem{Analyzed patient electronic health records (EHR) to predict readmission risks using Logistic Regression and Random Forest models.}
+        \resumeItem{Cleaned and preprocessed a dataset of 1M+ records using Pandas and NumPy, reducing missing values by imputation techniques.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Stock Market Sentiment Analysis} $|$ \emph{Python, NLP, BERT}}{Sep 2020}
+          \resumeItemListStart
+            \resumeItem{Fine-tuned a BERT model on financial news headlines to classify market sentiment with 89\% accuracy.}
+            \resumeItem{Built a dashboard using Streamlit to visualize sentiment trends alongside stock price movements.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Image Caption Generator} $|$ \emph{TensorFlow, LSTM, CNN}}{Apr 2020}
+          \resumeItemListStart
+            \resumeItem{Implemented an encoder-decoder architecture with attention mechanisms to generate descriptive captions for images.}
+            \resumeItem{Trained on the COCO dataset and achieved a BLEU score of 0.65.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, SQL, R, Scala, Bash, C++} \\
+     \textbf{Machine Learning}{: PyTorch, TensorFlow, Scikit-learn, XGBoost, Keras, NLTK, Spacy} \\
+     \textbf{Big Data & Cloud}{: AWS (S3, EC2, SageMaker), Spark, Hadoop, SQL, Snowflake, Docker, Kubernetes} \\
+     \textbf{Visualization}{: Tableau, PowerBI, Matplotlib, Seaborn, Plotly}
+    }}
+ \end{itemize}
+
+\end{document}

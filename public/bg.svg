@@ -1,0 +1,44 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+    <rect width="100%" height="100%" fill="#F8FAFC"/>
+    
+    <!-- Soft Gradient Orbs -->
+    <g opacity="0.6">
+        <!-- Main Blue Glow (Top Left) -->
+        <circle cx="0" cy="0" r="800" fill="url(#grad1)" fill-opacity="0.4"/>
+        
+        <!-- Accent Sky Glow (Bottom Right) -->
+        <circle cx="1920" cy="1080" r="900" fill="url(#grad2)" fill-opacity="0.3"/>
+        
+        <!-- Central Subtle Highlight -->
+        <ellipse cx="960" cy="540" rx="1200" ry="800" fill="url(#grad3)" fill-opacity="0.2"/>
+    </g>
+
+    <!-- Technical Grid Pattern -->
+    <rect width="100%" height="100%" fill="url(#grid-pattern)" fill-opacity="0.6"/>
+    
+    <!-- Definitions -->
+    <defs>
+        <!-- Fine Dot Grid -->
+        <pattern id="grid-pattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+            <circle cx="2" cy="2" r="1.5" fill="#94A3B8" fill-opacity="0.2"/>
+        </pattern>
+        
+        <!-- Deep Navy Gradient -->
+        <radialGradient id="grad1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(200 200) rotate(90) scale(800)">
+            <stop stop-color="#0F172A"/> <!-- primary -->
+            <stop offset="1" stop-color="#F8FAFC" stop-opacity="0"/>
+        </radialGradient>
+        
+        <!-- Bright Sky Gradient -->
+        <radialGradient id="grad2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1600 800) rotate(90) scale(900)">
+            <stop stop-color="#0EA5E9"/> <!-- accent -->
+            <stop offset="1" stop-color="#F8FAFC" stop-opacity="0"/>
+        </radialGradient>
+        
+        <!-- Center Light -->
+        <radialGradient id="grad3" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(960 540) rotate(90) scale(800)">
+            <stop stop-color="#FFFFFF"/>
+            <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+        </radialGradient>
+    </defs>
+</svg>
